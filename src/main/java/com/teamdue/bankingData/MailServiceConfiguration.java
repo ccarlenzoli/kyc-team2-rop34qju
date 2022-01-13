@@ -5,14 +5,14 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 
-import com.teamdue.bankingData.mail.MailServiceImpl;
+import com.teamdue.bankingData.mail.MailService;
 import com.teamdue.bankingData.mail.SendMail;
 
 @Configuration
 public class MailServiceConfiguration {
 
 	@Autowired
-	private MailServiceImpl senderService;
+	private MailService senderService;
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void sendMail() {

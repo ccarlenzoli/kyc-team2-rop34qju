@@ -1,4 +1,4 @@
-package com.teamdue.bankingData.mail;
+package com.teamdue.bankingData.mail.impl;
 
 import java.io.UnsupportedEncodingException;
 
@@ -11,9 +11,12 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
+import com.teamdue.bankingData.mail.MailService;
+import com.teamdue.bankingData.mail.SendMail;
+
 
 @Service
-public class MailServiceImpl {
+public class MailServiceImpl implements MailService {
 	
     @Autowired
     private JavaMailSender mailSender;
