@@ -13,6 +13,7 @@ public class ScheduleTest {
     @Scheduled(fixedRate = 3000)
     public void reportCurrentTime(){
         System.out.println(
+                "Millisec: " +
                 System.currentTimeMillis()
         );
     }
