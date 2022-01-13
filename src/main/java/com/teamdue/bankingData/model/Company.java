@@ -20,6 +20,8 @@ public class Company {
     private String ndg_type;
     private String vat_number;
 
+    public Company() {
+    }
 
     public String getNdg() {
         return ndg;

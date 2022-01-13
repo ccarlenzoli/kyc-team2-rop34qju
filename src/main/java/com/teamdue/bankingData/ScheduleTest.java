@@ -10,7 +10,7 @@ public class ScheduleTest {
 
     private static final Logger log = LoggerFactory.getLogger(ScheduleTest.class);
 
-    @Scheduled(fixedRate = 3000)
+    @Scheduled(fixedRate = 600000) //10 minuti
     public void reportCurrentTime(){
         System.out.println(
                 "Millisec: " +
