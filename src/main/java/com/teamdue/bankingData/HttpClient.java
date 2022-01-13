@@ -1,9 +1,11 @@
 package com.teamdue.bankingData;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
+import com.teamdue.bankingData.model.Anagrafica;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,16 +13,14 @@ import java.util.List;
 
 @Service
 public class HttpClient {
+
     RestTemplate restTemplate = new RestTemplate();
-    String resourceUrl = "http://192.46.232.80:9090/kyc/vat-number/58865973602";
-    ResponseEntity<String> response = restTemplate.getForEntity(resourceUrl, String.class);
 
-    @GetMapping("/id")
-    public List<Object> getId() {
-        String url = "http://192.46.232.80:9090/kyc/vat-number/58865973602";
-        Object[] objects = restTemplate.getForObject(resourceUrl, Object[].class);
+    public List<Anagrafica> getAnagraficaByVatNum(String vat) {
+        String url = "http://192.46.232.80:9090/kyc/vat-number/" + vat;
 
-        return Arrays.asList(objects);
+        Anagrafica anagrafica = restTemplate.getForObject(url, Anagrafica.class);
+
+        return (List<Anagrafica>) anagrafica;
     }
-
 }

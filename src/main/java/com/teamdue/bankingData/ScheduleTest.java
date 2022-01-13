@@ -1,7 +1,7 @@
 package com.teamdue.bankingData;
 
+import com.teamdue.bankingData.interfaces.CompanyInterface;
 import com.teamdue.bankingData.repository.AnagraficaRepository;
-import com.teamdue.bankingData.model.Company;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ScheduleTest {
+public class ScheduleTest implements CompanyInterface {
 
     @Autowired
     private AnagraficaRepository anagraficaRepository;
@@ -21,11 +21,18 @@ public class ScheduleTest {
         Iterable<Company> listaAnagrafica = anagraficaRepository.findAll();
 
         while(listaAnagrafica.iterator().hasNext()){
-            System.out.println(listaAnagrafica.iterator().next());
+            listaAnagrafica.iterator().next();
+
         }
 
         System.out.println(
                 "Millisec: " +
                 System.currentTimeMillis());
+    }
+
+    @Override
+    public void checkStatusAnagrafica(String ndg) {
+
+
     }
 }
