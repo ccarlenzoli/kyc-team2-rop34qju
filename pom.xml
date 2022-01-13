@@ -9,8 +9,8 @@
 		<version>2.2.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.team2</groupId>
-	<artifactId>kyc</artifactId>
+	<groupId>com.acme</groupId>
+	<artifactId>kyc-team2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>kyc</name>
 	<description>Kyc project for Spring Boot</description>
