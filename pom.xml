@@ -247,7 +247,7 @@
 			<!-- </sourcePaths> -->
 			<!-- <sourceDirectory>${basedir}/src/test/resources/postman/schemas</sourceDirectory> -->
 			<!-- <outputDirectory>${basedir}/src/test/java</outputDirectory> -->
-			<!-- <targetPackage>com.postman.schema.model</targetPackage> -->
+			<!-- <targetPackage>com.postman.schema.com.teamdue.bankingData.model</targetPackage> -->
 			<!-- <sourceType>json</sourceType> -->
 			<!-- </configuration> -->
 			<!-- <executions> -->

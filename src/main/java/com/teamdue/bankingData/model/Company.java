@@ -1,4 +1,4 @@
-package model;
+package com.teamdue.bankingData.model;
 
 
 import javax.persistence.*;
