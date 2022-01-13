@@ -1,9 +1,9 @@
-package com.teamdue.bankingData;
+package com.teamdue.mail;
 
 import java.util.Date;
 import java.util.List;
 
-public class sendMail {
+public class SendMail {
 
     private String mailFrom;
 
@@ -21,7 +21,7 @@ public class sendMail {
 
     private List < Object > attachments;
 
-    public sendMail() {
+    public SendMail() {
         contentType = "text/plain";
     }
 
