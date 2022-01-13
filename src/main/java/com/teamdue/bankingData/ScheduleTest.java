@@ -1,6 +1,7 @@
 package com.teamdue.bankingData;
 
 import com.teamdue.bankingData.interfaces.CompanyInterface;
+import com.teamdue.bankingData.model.Anagrafica;
 import com.teamdue.bankingData.repository.AnagraficaRepository;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
@@ -18,7 +19,7 @@ public class ScheduleTest implements CompanyInterface {
 
     @Scheduled(fixedRate = 600000) //10 minuti
     public void reportCurrentTime(){
-        Iterable<Company> listaAnagrafica = anagraficaRepository.findAll();
+        Iterable<Anagrafica> listaAnagrafica = anagraficaRepository.findAll();
 
         while(listaAnagrafica.iterator().hasNext()){
             listaAnagrafica.iterator().next();
