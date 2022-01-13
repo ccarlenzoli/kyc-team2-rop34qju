@@ -1,4 +1,4 @@
-package com.teamdue.mail;
+package com.teamdue.bankingData.mail;
 
 import java.util.Date;
 import java.util.List;
